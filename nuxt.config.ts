@@ -3,16 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  ssr: true, // Server Side Rendering
+  ssr: true, 
+  
   app: {
-    baseURL: '/JN-Studios-Website/' // This must match your repository name
+    baseURL: '/JN-Studios-Website/',
+    buildAssetsDir: 'assets' 
   },
   
-  // The module added this automatically, or add it manually:
   modules: ['@nuxtjs/sitemap'],
 
   site: {
-    url: 'https://www.jnstudios.demo',
+    // Only put the main domain here
+    url: 'https://AndyJrLojas.github.io',
     name: 'JN Studios Photography'
   }
 })

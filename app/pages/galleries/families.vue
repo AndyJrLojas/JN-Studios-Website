@@ -1,12 +1,25 @@
 <script setup>
+// 1. Get the config so we know the GitHub repository link
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL
+
 const images = [
-  '/julia-portrait.jpg',                    // Your real image (The Family)
-  '/family-hero.jpg',
-  'https://picsum.photos/id/65/600/800',  // Placeholder: Smiling Girl
-  'https://picsum.photos/id/342/600/800', // Placeholder: Holiday detail
-  'https://picsum.photos/id/1027/600/800', // Placeholder: Portrait
-  'https://picsum.photos/id/292/600/800', // Placeholder: Cooking/Lifestyle
+  'julia-portrait.jpg',
+  'family-hero.jpg',                       // YOUR NEW IMAGE (The Group)                
+  'https://picsum.photos/id/65/600/800',    // Placeholder: Smiling Girl
+  'https://picsum.photos/id/342/600/800',   // Placeholder: Holiday detail
+  'https://picsum.photos/id/1027/600/800',  // Placeholder: Portrait
+  'https://picsum.photos/id/292/600/800',   // Placeholder: Cooking/Lifestyle
 ]
+
+// 3. Helper function to check if image is Local or External
+const getImagePath = (path) => {
+  if (path.startsWith('http')) {
+    return path // It's an external link (Picsum), leave it alone
+  }
+  // It's a local file, add the repository name (BaseURL)
+  return `${baseURL}${path}`
+}
 </script>
 
 <template>
@@ -19,9 +32,13 @@ const images = [
     </div>
 
     <!-- HERO IMAGE FEATURE -->
-    <!-- This highlights the brother/sister shot beautifully -->
     <div class="hero-feature">
-      <img src="/family-hero.jpg" alt="Brother and Sister Portrait" class="hero-img">
+      <!-- FIXED: Uses dynamic base URL so it works on GitHub -->
+      <img 
+        :src="`${baseURL}family-hero.jpg`" 
+        alt="Brother and Sister Portrait" 
+        class="hero-img"
+      >
     </div>
 
     <!-- INTRO TEXT -->
@@ -41,7 +58,12 @@ const images = [
     <div class="gallery-grid">
       <div v-for="(img, index) in images" :key="index" class="gallery-item">
         <div class="image-wrapper">
-          <img :src="img" loading="lazy" alt="Family Portrait" />
+          <!-- FIXED: Uses the helper function to calculate the path -->
+          <img 
+            :src="getImagePath(img)" 
+            loading="lazy" 
+            alt="Family Portrait" 
+          />
           <div class="overlay"></div>
         </div>
       </div>
@@ -103,14 +125,13 @@ const images = [
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Adjust object-position if heads are cut off. 
-     '0 20%' moves the focus slightly up to faces */
+  /* Moves focus slightly up to faces */
   object-position: 0 20%; 
   transition: transform 2s ease;
 }
 
 .hero-feature:hover .hero-img {
-  transform: scale(1.02); /* Very subtle zoom on hover */
+  transform: scale(1.02); 
 }
 
 /* INTRO TEXT */
@@ -144,7 +165,7 @@ const images = [
 /* GRID STYLES */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly wider cards for families */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
   gap: 30px;
 }
 
@@ -198,7 +219,7 @@ const images = [
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .header-text h1 { font-size: 2.5rem; }
-  .hero-feature { height: 350px; } /* Smaller on mobile */
+  .hero-feature { height: 350px; } 
   .intro-body { font-size: 0.95rem; }
   .page-container { padding: 60px 20px; }
 }

@@ -1,16 +1,27 @@
+<script setup>
+// 1. GET THE GITHUB CONFIGURATION
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL
+
+useHead({
+  title: 'JN Studios | Julia Novikova',
+  link: [
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap' }
+  ]
+})
+</script>
+
 <template>
   <div class="home-container">
     
     <!-- SECTION 1: VIDEO HERO -->
     <section class="hero-split">
       <div class="hero-bg-wrapper">
-        <!-- VIDEO BACKGROUND IMPLEMENTATION -->
-        <!-- muted, loop, playsinline are essential for auto-play -->
+        <!-- FIXED VIDEO PATH -->
+        <!-- Note the : before src and the ${baseURL} -->
         <video autoplay muted loop playsinline class="hero-bg">
-          <!-- Replace this src with your actual file path -->
-          <source src="/hero-reel.mp4" type="video/mp4">
+          <source :src="`${baseURL}hero-reel.mp4`" type="video/mp4">
         </video>
-        <!-- A slightly warmer overlay for that 'Golden Hour' feel -->
         <div class="warm-overlay"></div>
       </div>
       
@@ -22,7 +33,6 @@
         </h1>
         <p class="hero-subtitle">Timeless Weddings & Professional Headshots</p>
         
-        <!-- CLEAR NAVIGATION -->
         <div class="hero-actions">
           <NuxtLink to="/galleries/weddings" class="btn-transparent">
             View Weddings
@@ -35,13 +45,15 @@
       </div>
     </section>
 
-    <!-- SECTION 2: THE PHILOSOPHY (Softened Tone) -->
+    <!-- SECTION 2: THE PHILOSOPHY -->
     <section class="warm-editorial">
       <div class="container">
         <div class="overlap-grid">
           <div class="image-wrapper reveal-on-scroll">
-            <!-- Use her portrait here -->
-            <img src="/julia-portrait.jpg" alt="Julia Novikova">
+            
+            <!-- FIXED IMAGE PATH -->
+            <img :src="`${baseURL}julia-portrait.jpg`" alt="Julia Novikova">
+            
             <div class="gold-frame"></div>
           </div>
           
@@ -62,7 +74,7 @@
       </div>
     </section>
 
-    <!-- SECTION 3: SERVICES (Direct & Clear) -->
+    <!-- SECTION 3: SERVICES -->
     <section class="services-clean">
       <div class="section-header">
         <h2 class="serif-title">How can I help you?</h2>
@@ -99,6 +111,8 @@
 </template>
 
 <style scoped>
+/* YOUR EXISTING STYLES GO HERE - NO CHANGES NEEDED TO CSS */
+/* Just paste the styles you already had for the Home page */
 /* --- ANIMATIONS --- */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(20px); }
