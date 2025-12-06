@@ -3,19 +3,73 @@
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website</loc>
         <image:image>
-            <image:loc>https://AndyJrLojas.github.io/julia-portrait.jpg</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family-portrait.jpg</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/338/800/1000</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding11.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/64/800/1000</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot1.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cdn1.weddingwire.ca/assets/img/logos/gen_logoHeader.svg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/rbc.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/td.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/remax.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/CIBC.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/sotheby&amp;#39;s.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website/about</loc>
         <image:image>
             <image:loc>https://AndyJrLojas.github.io/JuliaPortrait.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/bestforbride.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cdn1.weddingwire.ca/assets/img/logos/gen_logoHeader.svg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://AndyJrLojas.github.io/JN-Studios-Website/blog</loc>
+        <image:image>
+            <image:loc>https://picsum.photos/id/103/600/800</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/64/600/400</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/331/600/700</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/180/600/500</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/250/600/800</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/342/600/400</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://AndyJrLojas.github.io/JN-Studios-Website/cinematography</loc>
+        <image:image>
+            <image:loc>https://picsum.photos/id/158/800/600</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://picsum.photos/id/192/800/600</image:loc>
         </image:image>
     </url>
     <url>
@@ -27,77 +81,161 @@
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website/JN-Studios-Website</loc>
         <image:image>
-            <image:loc>https://AndyJrLojas.github.io/julia-portrait.jpg</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family-portrait.jpg</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/338/800/1000</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding11.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/64/800/1000</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot1.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cdn1.weddingwire.ca/assets/img/logos/gen_logoHeader.svg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/rbc.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/td.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/remax.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/CIBC.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/logos/sotheby&amp;#39;s.png</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://AndyJrLojas.github.io/JN-Studios-Website/pricing</loc>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot9.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot6.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot7.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website/galleries/families</loc>
         <image:image>
-            <image:loc>https://AndyJrLojas.github.io/family-hero.jpg</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family11.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://AndyJrLojas.github.io/julia-portrait.jpg</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family4.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/65/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family1.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/342/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family2.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/1027/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family3.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/292/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/family5.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family6.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family7.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family8.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family9.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family10.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/family12.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website/galleries/headshots</loc>
         <image:image>
-            <image:loc>https://picsum.photos/id/338/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot7.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/64/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/corporate2.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/91/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot1.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/1027/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot2.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/342/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot3.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/203/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/headshot4.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot5.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot6.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot8.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot9.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/headshot10.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/corporate1.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://AndyJrLojas.github.io/JN-Studios-Website/galleries/weddings</loc>
         <image:image>
-            <image:loc>https://picsum.photos/id/65/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding4.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/319/600/400</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding6.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/331/600/600</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding10.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/823/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding5.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/1011/600/400</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding7.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://picsum.photos/id/1027/600/800</image:loc>
+            <image:loc>https://AndyJrLojas.github.io/wedding8.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding9.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding11.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding12.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding13.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding14.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://AndyJrLojas.github.io/wedding15.webp</image:loc>
         </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.4.8 at 2025-12-05T21:51:45.194Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.4.8 at 2025-12-06T21:09:09.855Z -->
