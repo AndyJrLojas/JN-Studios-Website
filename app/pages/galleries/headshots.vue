@@ -3,21 +3,27 @@ useHead({
   title: 'Headshots & Corporate | JN Studios'
 })
 
-// 1. The Main Hero Image (The one shown next to the text)
-const heroImage = '/headshot7.webp'
+// 1. GET CONFIG (The Fix)
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL
 
-// 2. The Corporate Images
-const corporateImage = '/corporate2.webp'
-const corporateSecondary = '/corporate1.webp'
+// 2. The Main Hero Image
+// Fix: Add ${baseURL} before the filename
+const heroImage = `${baseURL}headshot7.webp`
 
-// 3. The Gallery Grid (Headshots 2 through 11)
-const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.webp`)
+// 3. The Corporate Images
+const corporateImage = `${baseURL}corporate2.webp`
+const corporateSecondary = `${baseURL}corporate1.webp`
+
+// 4. The Gallery Grid (Headshots 1 through 10)
+// Fix: Add ${baseURL} inside the loop
+const galleryImages = Array.from({ length: 10 }, (_, i) => `${baseURL}headshot${i + 1}.webp`)
 </script>
 
 <template>
   <div class="page-container">
 
-    <!-- SECTION 1: PERSONAL BRANDING (Split Layout like Reference) -->
+    <!-- SECTION 1: PERSONAL BRANDING -->
     <section class="bio-section">
       <div class="bio-image">
         <img :src="heroImage" alt="Professional Headshot Portrait" />
@@ -47,7 +53,7 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
       </div>
     </section>
 
-    <!-- SECTION 2: CORPORATE TEAMS (Reversed Layout) -->
+    <!-- SECTION 2: CORPORATE TEAMS -->
     <section class="corporate-section">
       <div class="bio-content">
         <h4 class="overline">For Companies</h4>
@@ -65,8 +71,6 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
 
       <div class="corporate-images-wrapper">
         <img :src="corporateImage" alt="Corporate Team Photo" class="corp-img-main" />
-        <!-- Optional: Display second corporate image smaller or stacked -->
-        <!-- <img :src="corporateSecondary" alt="Corporate Team Action" class="corp-img-small" /> -->
       </div>
     </section>
 
@@ -74,15 +78,13 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
     <section class="portfolio-section">
       <h3 class="centered-title">Selected Works</h3>
       <div class="gallery-grid">
-        <!-- Display Corporate 2 here mixed in, or strictly headshots. 
-             Here we display the remaining headshots. -->
         <div v-for="(img, index) in galleryImages" :key="index" class="gallery-item">
           <div class="image-wrapper">
             <img :src="img" loading="lazy" alt="Headshot Portfolio" />
           </div>
         </div>
         
-        <!-- Add the second corporate image to the grid as well -->
+        <!-- Corporate Secondary Image in Grid -->
         <div class="gallery-item">
            <div class="image-wrapper">
             <img :src="corporateSecondary" loading="lazy" alt="Corporate Portfolio" />
@@ -111,14 +113,14 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
 .bio-section, .corporate-section {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center the text */
+  align-items: center; 
   gap: 60px;
   padding: 80px 5%;
-  min-height: 80vh; /* Takes up most of the screen */
+  min-height: 80vh; 
 }
 
 .corporate-section {
-  background-color: #fbfbfb; /* Slight grey background to differentiate */
+  background-color: #fbfbfb; 
 }
 
 .bio-image, .corporate-images-wrapper {
@@ -131,7 +133,6 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
   height: auto;
   object-fit: cover;
   display: block;
-  /* Optional: Add a subtle shadow like the reference */
   box-shadow: 20px 20px 0px rgba(198, 168, 124, 0.15); 
 }
 
@@ -140,7 +141,6 @@ const galleryImages = Array.from({ length: 10 }, (_, i) => `/headshot${i + 1}.we
   padding: 0 20px;
 }
 
-/* Typography matching the reference */
 .overline {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
@@ -218,7 +218,7 @@ h1, h2 {
 
 .image-wrapper {
   overflow: hidden;
-  height: 400px; /* Uniform height */
+  height: 400px; 
   position: relative;
 }
 
@@ -265,18 +265,15 @@ h1, h2 {
     flex-direction: column;
     padding: 60px 20px;
     gap: 40px;
-    text-align: center; /* Center text on mobile */
+    text-align: center; 
   }
 
-  /* Reverse the order on mobile for corporate so image is on top? 
-     Or keep image on bottom. Currently image is second in DOM for corporate. 
-     Let's put image first on mobile for consistency */
   .corporate-section {
     flex-direction: column-reverse;
   }
 
   .bio-image img, .corporate-images-wrapper img {
-    box-shadow: none; /* Remove offset shadow on mobile for cleaner look */
+    box-shadow: none; 
   }
 
   h1, h2 { font-size: 2.2rem; }

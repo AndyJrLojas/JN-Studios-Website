@@ -3,23 +3,27 @@ useHead({
   title: 'Weddings & Love Stories | JN Studios'
 })
 
+// 1. GET THE BASE URL (This is the fix)
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL
+
 // SECTION A: Featured Stories (Images 1-3)
-// These are the images that will have text next to them (Alternating layout)
 const featuredStories = [
   {
-    image: '/wedding4.webp',
+    // Fix: Add ${baseURL} before the image name
+    image: `${baseURL}wedding4.webp`,
     couple: 'Sarah & James',
     location: 'The Arlington Estate',
     quote: "We were nervous about being in front of the camera, but Julia made us feel so effortless. Looking at our photos now, we don't just see how we looked; we remember exactly how we felt in that moment. Pure magic."
   },
   {
-    image: '/wedding6.webp',
+    image: `${baseURL}wedding6.webp`,
     couple: 'Elena & Mark',
     location: 'Downtown Toronto',
     quote: "JN Studios didn't just capture our wedding; they captured our story. The candid moments during the speeches and the quiet moments during our first look are photos we will cherish for generations."
   },
   {
-    image: '/wedding10.webp',
+    image: `${baseURL}wedding10.webp`,
     couple: 'Priya & Anish',
     location: 'Niagara Vineyards',
     quote: "Professional, calming, and incredibly talented. The team managed to organize our large family photos efficiently while still capturing the artistic, romantic shots we dreamed of."
@@ -27,8 +31,8 @@ const featuredStories = [
 ]
 
 // SECTION B: The Gallery Grid (Images 4-12)
-// This automatically generates the paths for wedding4.webp through wedding12.webp
-const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.webp`)
+// Fix: We add the baseURL inside the map function
+const galleryImages = Array.from({ length: 9 }, (_, i) => `${baseURL}wedding${i + 4}.webp`)
 </script>
 
 <template>
@@ -166,11 +170,11 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.web
 .gold-text { color: #C6A87C; font-style: italic; }
 .intro { font-family: 'Montserrat', sans-serif; color: #666; font-weight: 300; }
 
-/* --- FEATURED STORIES (The Text + Image Logic) --- */
+/* --- FEATURED STORIES --- */
 .stories-container {
   display: flex;
   flex-direction: column;
-  gap: 100px; /* Space between stories */
+  gap: 100px; 
   margin-bottom: 100px;
 }
 
@@ -180,7 +184,6 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.web
   gap: 60px;
 }
 
-/* Zig-Zag Effect: Reverses order for every second item */
 .reverse-layout {
   flex-direction: row-reverse;
 }
@@ -194,7 +197,6 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.web
   height: 500px;
   object-fit: cover;
   display: block;
-  /* Optional: Add shadow */
   box-shadow: 10px 10px 0px rgba(198, 168, 124, 0.2); 
 }
 
@@ -248,7 +250,7 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.web
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #ccc; /* Subtle divider title */
+  color: #ccc;
 }
 
 .grid { 
@@ -260,7 +262,7 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/wedding${i + 4}.web
 .item img { width: 100%; height: 450px; object-fit: cover; transition: 0.3s; filter: grayscale(10%); }
 .item img:hover { transform: scale(1.02); filter: grayscale(0); }
 
-/* --- PRICING STYLES (Unchanged) --- */
+/* --- PRICING --- */
 .pricing-section { border-top: 1px solid #f0f0f0; padding-top: 80px; }
 .pricing-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 50px; }
 .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }

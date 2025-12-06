@@ -136,11 +136,10 @@ onMounted(() => {
         <div class="logo-grid">
           
           <!-- Using Images is much safer for complex Brand Logos -->
-          <!-- Make sure to add these files to your public/logos/ folder -->
           
           <img :src="`${baseURL}logos/rbc.png`" alt="RBC" class="client-logo-img">
           <img :src="`${baseURL}logos/td.jpg`" alt="TD Bank" class="client-logo-img">
-          <img :src="`${baseURL}logos/remax.png`" alt="RE/MAX" class="client-logo-img">
+          <img :src="`${baseURL}logos/REMAX.png`" alt="RE/MAX" class="client-logo-img">
           <img :src="`${baseURL}logos/CIBC.png`" alt="CIBC" class="client-logo-img">
           <img :src="`${baseURL}logos/sotheby's.png`" alt="Sotheby's" class="client-logo-img">
           

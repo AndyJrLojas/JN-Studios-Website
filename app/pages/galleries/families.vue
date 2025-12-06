@@ -3,13 +3,18 @@ useHead({
   title: 'Family & Lifestyle | JN Studios'
 })
 
-// 1. Featured Images for the split sections
-const heroImage = '/family11.webp'
-const lifestyleImage = '/family4.webp'
+// 1. GET THE BASE URL (The Fix)
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL
 
-// 2. The Grid Images (Family 3 to 12)
-// We create an array of numbers 3..12 and map them to file paths
-const galleryImages = Array.from({ length: 12 }, (_, i) => `/family${i + 1}.webp`)
+// 2. Featured Images for the split sections
+// Fix: Add ${baseURL} before the filename
+const heroImage = `${baseURL}family-portrait.jpg`
+const lifestyleImage = `${baseURL}family4.webp`
+
+// 3. The Grid Images
+// Fix: Add ${baseURL} inside the map function
+const galleryImages = Array.from({ length: 12 }, (_, i) => `${baseURL}family${i + 1}.webp`)
 </script>
 
 <template>
@@ -34,9 +39,6 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/family${i + 1}.webp
           Whether in-studio or outdoors during the golden hour, we guide you through natural 
           posing to ensure everyone looks their best while still feeling like themselves.
         </p>
-        <div class="pricing-pill">
-          <span>Sessions start at $450</span>
-        </div>
       </div>
 
       <div class="split-image">
@@ -66,7 +68,7 @@ const galleryImages = Array.from({ length: 12 }, (_, i) => `/family${i + 1}.webp
       </div>
     </section>
 
-    <!-- THE GALLERY GRID (Images 3-12) -->
+    <!-- THE GALLERY GRID -->
     <div class="gallery-wrapper">
       <h3 class="section-title">Gallery Highlights</h3>
       <div class="gallery-grid">
